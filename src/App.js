@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
 import canyon from './assets/boulderCanyon.jpg';
 import './App.css';
+import Header from './Header';
 
-class App extends Component {
+export default class App extends Component {
+  constructor() {
+    super();
+  }
+
+  //methods go here
+  
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+          <Header />
           <img src={canyon} className="App-logo" alt="boulder canyon" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          
       </div>
     );
   }
 }
-
-export default App;

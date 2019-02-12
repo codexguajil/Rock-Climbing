@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import canyon from './assets/boulderCanyon.jpg';
+import Header from './Header';
+import Filter from './Filter';
+import ListContainer from './ListContainer';
+import './Master.scss';
 
-class App extends Component {
+export default class App extends Component {
+  constructor() {
+    super();
+  }
+
+  //methods go here
+  //learn fetch/catch
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <Header />
+          <Filter />
+          <ListContainer />
       </div>
     );
   }
 }
-
-export default App;

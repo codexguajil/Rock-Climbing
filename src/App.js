@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import canyon from './assets/boulderCanyon.jpg';
-import './App.css';
 import Header from './Header';
+import Filter from './Filter';
+import ListContainer from './ListContainer';
+import './Master.scss';
 
 export default class App extends Component {
   constructor() {
@@ -9,14 +11,14 @@ export default class App extends Component {
   }
 
   //methods go here
-  
+  //learn fetch/catch
 
   render() {
     return (
       <div className="App">
           <Header />
-          <img src={canyon} className="App-logo" alt="boulder canyon" />
-          
+          <Filter />
+          <ListContainer />
       </div>
     );
   }

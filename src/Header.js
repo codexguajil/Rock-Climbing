@@ -3,7 +3,7 @@ import Search from './Search';
 
 export default function Header (props) {
 
-  return(
+  return (
     <header>
       <h1>Climb Time</h1>
       <Search />

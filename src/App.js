@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import canyon from './assets/boulderCanyon.jpg';
 import './App.css';
 
 class App extends Component {
@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={canyon} className="App-logo" alt="boulder canyon" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>

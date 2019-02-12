@@ -5,9 +5,14 @@ export default function ListContainer (props) {
 
   return (
       <ul>
-      <li>
-        <Description />
-      </li>
+        {
+          props.distances.map(distance => {
+            return (
+              <Description distance={distance}/>
+              
+            )
+          })
+        }
       </ul>
     )
 }

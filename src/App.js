@@ -3,11 +3,16 @@ import canyon from './assets/boulderCanyon.jpg';
 import Header from './Header';
 import Filter from './Filter';
 import ListContainer from './ListContainer';
+import {coloradoClimbingAreas, distanceFromDenverGroupings} from './data.js';
 import './Master.scss';
 
 export default class App extends Component {
   constructor() {
     super();
+    this.state = {
+      areas: coloradoClimbingAreas,
+      distances: distanceFromDenverGroupings
+    }
   }
 
   //methods go here
@@ -18,7 +23,7 @@ export default class App extends Component {
       <div className="App">
           <Header />
           <Filter />
-          <ListContainer />
+          <ListContainer distances={this.state.distances}/>
       </div>
     );
   }

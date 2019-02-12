@@ -175,7 +175,7 @@ const coloradoClimbingAreas  = {
                 "name": "Ivory Coast",
                 "grade": "5.11+",
                 "type": ["trad"],
-                "link": 
+                "link": ""
             },
             {
                 "name": "Carter Classic",
@@ -1298,7 +1298,7 @@ const coloradoClimbingAreas  = {
                 "name": "Sizzlin' Summer Solstice Spectacular",
                 "grade": "5.10",
                 "type": ["sport"],
-                "link": 
+                "link": ""
             },
             {
                 "name": "Darkness Till Dawn",

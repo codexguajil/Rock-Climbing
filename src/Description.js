@@ -8,9 +8,10 @@ export default class Description extends Component {
   //toggle display description here
 
   render() {
+    console.log(this.props.distance)
     return (
       <div>
-        hiking trail to pick
+        <p>Hello</p>
       </div>
     )
   }

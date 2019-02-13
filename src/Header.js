@@ -6,7 +6,7 @@ export default function Header (props) {
   return (
     <header>
       <h1>Climb Time</h1>
-      <Search />
+      <Search search={props.search}/>
     </header>
   )
 }

@@ -14,6 +14,7 @@ export default class App extends Component {
       distances: distanceFromDenverGroupings,
       filterAreas: [],
       filterTypes: []
+      searchString: ''
     }
   }
 
@@ -24,10 +25,18 @@ export default class App extends Component {
     })
   }
 
+  handleSearch = (value) => {
+    console.log(value)
+    this.setState({searchString: value})
+  }
+
+  //methods go here
+  //learn fetch/catch
+
   render() {
     return (
       <div className="App">
-          <Header />
+          <Header search={this.handleSearch}/>
           <Filter climb={this.state.areas}
                   updateFromFilter={this.updateFromFilter}/>
           <ListContainer distances={this.state.distances}/>

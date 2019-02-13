@@ -37,3 +37,4 @@ export default class Search extends Component {
 //search trail or area
 //name, grade, type, general areas
 //if typeof is number or string, fuzzy search/autocomplete
+//where to update search display???

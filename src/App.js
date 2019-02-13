@@ -3,7 +3,7 @@ import canyon from './assets/boulderCanyon.jpg';
 import Header from './Header';
 import Filter from './Filter';
 import ListContainer from './ListContainer';
-import {coloradoClimbingAreas, distanceFromDenverGroupings} from './data.js';
+import { coloradoClimbingAreas, distanceFromDenverGroupings } from './data';
 import './Master.scss';
 
 export default class App extends Component {
@@ -21,8 +21,8 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-          <Header climb={this.state.coloradoClimbingAreas}/>
-          <Filter />
+          <Header />
+          <Filter climb={this.state.areas}/>
           <ListContainer distances={this.state.distances}/>
       </div>
     );

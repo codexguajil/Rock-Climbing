@@ -11,18 +11,25 @@ export default class App extends Component {
     super();
     this.state = {
       areas: coloradoClimbingAreas,
-      distances: distanceFromDenverGroupings
+      distances: distanceFromDenverGroupings,
+      filterAreas: [],
+      filterTypes: []
     }
   }
 
-  //methods go here
-  //learn fetch/catch
+  updateFromFilter = (areas, types) => {
+    this.setState({
+      filterAreas: areas,
+      filterTypes: types
+    })
+  }
 
   render() {
     return (
       <div className="App">
           <Header />
-          <Filter climb={this.state.areas}/>
+          <Filter climb={this.state.areas}
+                  updateFromFilter={this.updateFromFilter}/>
           <ListContainer distances={this.state.distances}/>
       </div>
     );

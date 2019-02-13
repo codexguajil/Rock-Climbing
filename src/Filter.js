@@ -6,7 +6,9 @@ export default class Filter extends Component {
     this.state = {
       setMax: 50,
       types: [],
-      areas: []
+      areas: [],
+      areasPick: [],
+      typesPick: []
     }
   }
 
@@ -25,6 +27,7 @@ export default class Filter extends Component {
       setMax: event.target.value,
       types: type
     })
+    this.changeArea()
   }
 
   changeArea = event => {
@@ -43,39 +46,61 @@ export default class Filter extends Component {
       return acc;
     }, [])
     this.setState({
-      areas: areas
+      areas: areas,
+      typesPick: types
     })
+  }
+
+  UpdateAreasPick = () => {
+    let areas = []
+    document.querySelectorAll('input[name="areas"]:checked').forEach((type) => {
+      areas.push(type.value)
+    })
+    this.setState({
+      areasPick: areas
+    })
+  }
+
+  submitFilter = event => {
+    event.preventDefault()
+    this.props.updateFromFilter(this.state.areasPick, this.state.typesPick)
   }
 
 
   render() {
     return (
-      <form className="filter-section"> 
+      <form onSubmit={this.submitFilter} className="filter-section"> 
         <h2>Pick Your Next Plan</h2>
-        <p>distance from denver</p>
-        <p>{this.state.setMax} miles away</p>
+        <h3>Distance From Denver</h3>
+        <div className="filter-range-section">
+          <p>{this.state.setMax} miles away</p>
           <input className="range" type="range" onChange={this.changeType} min="1" max="400" ></input>
-        <p>type</p>
-        {
-          this.state.types.map((type) => {
-            return (
-              <div>
-                <input onChange={this.changeArea} name="types" type="checkbox" value={type}/> {type}
-              </div>
-            )
-          })
-        }
-        <p>areas</p>
-        {
-          this.state.areas.map((area) => {
-            return (
-              <div>
-                <input onChange={this.changeArea} name="types" type="checkbox" value={area}/> {area}
-              </div>
-            )
-          })
-        }
-        <input type="submit" value="submit"></input>
+        </div>
+        <h3>Type</h3>
+        <div className="filter-type-section">
+          {
+            this.state.types.map((type) => {
+              return (
+                <div>
+                  <input onChange={this.changeArea} name="types" type="checkbox" value={type}/> {type}
+                </div>
+              )
+            })
+          }
+        </div>
+        <h3>Areas</h3>
+        <div className="filter-area-section">
+          {
+            this.state.areas.map((area) => {
+              return (
+                <div>
+                  <input onChange={this.UpdateAreasPick} name="areas" type="checkbox" value={area}/> {area}
+                </div>
+              )
+            })
+          }
+        </div>
+        <input class="filter-submit-button" type="submit" value="Climb"></input>
       </form>
     )
   }

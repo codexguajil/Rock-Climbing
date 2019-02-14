@@ -12,7 +12,7 @@ export default class App extends Component {
     this.state = {
       areas: coloradoClimbingAreas,
       distances: distanceFromDenverGroupings,
-      filterAreas: ["Boulder Canyon"],
+      filterAreas: [],
       filterTypes: [],
       searchString: ''
     }
@@ -34,13 +34,24 @@ export default class App extends Component {
   //learn fetch/catch
 
   render() {
-    return (
-      <div className="App">
-          <Header search={this.handleSearch}/>
-          <Filter climb={this.state.areas}
-                  updateFromFilter={this.updateFromFilter}/>
-          <ListContainer areaName={this.state.filterAreas} areaAndRoutes={this.state.areas}/>
-      </div>
-    );
+    if (this.state.filterAreas.length === 0) {
+      return (
+        <div className="App">
+            <Header search={this.handleSearch}/>
+            <Filter climb={this.state.areas}
+                    updateFromFilter={this.updateFromFilter}/>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+            <Header search={this.handleSearch}/>
+            <Filter climb={this.state.areas}
+                    updateFromFilter={this.updateFromFilter}/>
+            <ListContainer areaName={this.state.filterAreas} areasAndRoutes={this.state.areas} areaType={this.state.filterTypes}/>
+        </div>
+      );
+    }
+    
   }
 }

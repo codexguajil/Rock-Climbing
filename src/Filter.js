@@ -63,6 +63,7 @@ export default class Filter extends Component {
 
   submitFilter = event => {
     event.preventDefault()
+    console.log('submit button')
     this.props.updateFromFilter(this.state.areasPick, this.state.typesPick)
   }
 

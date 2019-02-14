@@ -31,18 +31,16 @@ export default function ListContainer (props) {
 
   console.log(matchedType, "types");
 
-  
-
   return (
       <ul>
         {
           
-      matchedType.map((type) => {
-        return (
-          <Description matchedType={type} 
-          />
-        )
-      })
+        matchedType.map((type) => {
+          return (
+            <Description matchedType={type} 
+            />
+          )
+        })
         
       }
       </ul>

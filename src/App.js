@@ -13,7 +13,7 @@ export default class App extends Component {
       areas: coloradoClimbingAreas,
       distances: distanceFromDenverGroupings,
       filterAreas: [],
-      filterTypes: []
+      filterTypes: [],
       searchString: ''
     }
   }
@@ -34,13 +34,15 @@ export default class App extends Component {
   //learn fetch/catch
 
   render() {
-    return (
-      <div className="App">
-          <Header search={this.handleSearch}/>
-          <Filter climb={this.state.areas}
-                  updateFromFilter={this.updateFromFilter}/>
-          <ListContainer distances={this.state.distances}/>
-      </div>
-    );
+      return (
+        <div className="App">
+            <Header search={this.handleSearch}/>
+            <Filter climb={this.state.areas}
+                    updateFromFilter={this.updateFromFilter}/>
+            { this.state.filterAreas.length && 
+            <ListContainer areaName={this.state.filterAreas} areasAndRoutes={this.state.areas} areaType={this.state.filterTypes}/>
+            }
+        </div>
+      );
+    }
   }
-}

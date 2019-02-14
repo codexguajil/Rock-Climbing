@@ -3,16 +3,20 @@ import Description from './Description';
 
 export default function ListContainer (props) {
 
+  let routeNames = props.areaAndRoutes[props.areaName].classicRoutes.map((route) => {
+    return route.name
+  })
+
+  debugger
+
   return (
       <ul>
         {
-          props.distances.map(distance => {
-            return (
-              <Description distance={distance}/>
-              
-            )
-          })
-        }
+          
+      console.log(routeNames)
+      
+        
+      }
       </ul>
     )
 }

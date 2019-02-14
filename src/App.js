@@ -12,7 +12,7 @@ export default class App extends Component {
     this.state = {
       areas: coloradoClimbingAreas,
       distances: distanceFromDenverGroupings,
-      filterAreas: [],
+      filterAreas: ["Boulder Canyon"],
       filterTypes: [],
       searchString: ''
     }
@@ -39,7 +39,7 @@ export default class App extends Component {
           <Header search={this.handleSearch}/>
           <Filter climb={this.state.areas}
                   updateFromFilter={this.updateFromFilter}/>
-          <ListContainer distances={this.state.distances}/>
+          <ListContainer areaName={this.state.filterAreas} areaAndRoutes={this.state.areas}/>
       </div>
     );
   }

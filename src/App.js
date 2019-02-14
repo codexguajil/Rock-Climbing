@@ -34,24 +34,15 @@ export default class App extends Component {
   //learn fetch/catch
 
   render() {
-    if (this.state.filterAreas.length === 0) {
       return (
         <div className="App">
             <Header search={this.handleSearch}/>
             <Filter climb={this.state.areas}
                     updateFromFilter={this.updateFromFilter}/>
-        </div>
-      );
-    } else {
-      return (
-        <div className="App">
-            <Header search={this.handleSearch}/>
-            <Filter climb={this.state.areas}
-                    updateFromFilter={this.updateFromFilter}/>
+            { this.state.filterAreas.length && 
             <ListContainer areaName={this.state.filterAreas} areasAndRoutes={this.state.areas} areaType={this.state.filterTypes}/>
+            }
         </div>
       );
     }
-    
   }
-}

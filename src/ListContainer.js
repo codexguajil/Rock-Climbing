@@ -14,14 +14,35 @@ export default function ListContainer (props) {
     return acc;
   }, [])
 
+  console.log(matchedAreas, "areas");
+  console.log(matchedAreas[0].classicRoutes)
+
+  let matchedType = props.areaType.reduce((acc, selectedType) => {
+    matchedAreas.forEach((uniqueArea) => {
+      uniqueArea.classicRoutes.forEach((route) => {
+        if (route.type.includes(selectedType)) {
+          acc.push(route)
+        }
+      })
+    })
+
+    return acc;
+  }, []);
+
+  console.log(matchedType, "types");
+
   
-  console.log(matchedAreas);
 
   return (
       <ul>
         {
           
-      
+      matchedType.map((type) => {
+        return (
+          <Description matchedType={type} 
+          />
+        )
+      })
         
       }
       </ul>

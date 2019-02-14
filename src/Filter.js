@@ -13,7 +13,6 @@ export default class Filter extends Component {
   }
 
   changeType = event => {
-    console.log(this.props.climb)
     let type = Object.keys(this.props.climb).reduce((acc, area) => {
       if(this.props.climb[area].milesFromDenver <= event.target.value){
         this.props.climb[area].typesOfClimbing.forEach((type) => {

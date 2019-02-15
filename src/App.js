@@ -13,8 +13,7 @@ export default class App extends Component {
       areas: {},
       distances: [],
       filterAreas: [],
-      filterTypes: [],
-      searchString: ''
+      filterTypes: []
     }
   }
 
@@ -33,7 +32,8 @@ export default class App extends Component {
   }
 
   handleSearch = (value) => {
-    this.setState({searchString: value})
+    console.log(value)
+    this.setState({filterAreas: value, filterTypes: []})
   }
 
   //methods go here
@@ -45,9 +45,7 @@ export default class App extends Component {
             <Header search={this.handleSearch}/>
             <Filter climb={this.state.areas}
                     updateFromFilter={this.updateFromFilter}/>
-            { this.state.filterAreas.length && 
             <ListContainer areaName={this.state.filterAreas} areasAndRoutes={this.state.areas} areaType={this.state.filterTypes}/>
-            }
         </div>
       );
     }

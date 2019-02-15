@@ -3,19 +3,26 @@ import canyon from './assets/boulderCanyon.jpg';
 import Header from './Header';
 import Filter from './Filter';
 import ListContainer from './ListContainer';
-import { coloradoClimbingAreas, distanceFromDenverGroupings } from './data';
+// import { coloradoClimbingAreas, distanceFromDenverGroupings } from './data';
 import './Master.scss';
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      areas: coloradoClimbingAreas,
-      distances: distanceFromDenverGroupings,
+      areas: {},
+      distances: [],
       filterAreas: [],
       filterTypes: []
     }
   }
+
+  componentDidMount() {  
+  fetch('http://whateverly-datasets.herokuapp.com/api/v1/coloradoClimbingAreas')
+      .then(response => response.json())
+      .then(climbingData => this.setState({areas: climbingData.coloradoClimbingAreas}))
+      .catch(error => {throw new Error(error)})
+    }
 
   updateFromFilter = (areas, types) => {
     this.setState({

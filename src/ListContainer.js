@@ -34,7 +34,6 @@ export default function ListContainer (props) {
     }, [])
     console.log(matchedType)
   }
-  
 
   return (
       <ul>

@@ -4,6 +4,7 @@ import Description from './Description';
 export default function ListContainer (props) {
 
   let matchedType;
+
   if(props.areaType.length > 0) {
     let matchedAreas = Object.keys(props.areasAndRoutes).reduce((acc, area) => {
       if (props.areaName.includes(area)) {
@@ -19,11 +20,11 @@ export default function ListContainer (props) {
           }
         })
       })
-  
       return acc;
     }, []);
   
   } else {
+    //if the user types an area in the search directly then execute the following:
     matchedType = Object.keys(props.areasAndRoutes).reduce((acc, area) => {
       if (props.areaName === area) {
        acc = props.areasAndRoutes[area].classicRoutes

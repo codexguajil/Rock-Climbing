@@ -13,4 +13,12 @@ describe('Search', () => {
         );
     });
 
+    it('should produce a collection of climbing routes that match the type and area if user selects type & area', () => {
+        expect();
+    });
+
+    it('should produce a list of climbing routes that are within the area that the user types in the search', () => {
+        expect()
+    })
+
 });

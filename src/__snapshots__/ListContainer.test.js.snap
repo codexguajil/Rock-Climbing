@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListContainer should produce a collection of climbing routes if user selects type & area 1`] = `
+<ul>
+  <Description
+    matchedType={
+      Object {
+        "grade": "5.11a/b",
+        "id": 42,
+        "link": "https://www.mountainproject.com/route/105759012/trick-or-treat",
+        "name": "Trick-or-Treat",
+        "type": Array [
+          "toprope",
+        ],
+      }
+    }
+  />
+</ul>
+`;
+
+exports[`ListContainer should produce a list of climbing routes that are within the area that the user types in the search 1`] = `<ul />`;

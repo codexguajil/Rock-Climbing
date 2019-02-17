@@ -23,16 +23,13 @@ export default function ListContainer (props) {
       return acc;
     }, []);
   
-  }else{
+  } else {
     matchedType = Object.keys(props.areasAndRoutes).reduce((acc, area) => {
       if (props.areaName === area) {
-        console.log("hello")
        acc = props.areasAndRoutes[area].classicRoutes
-       console.log(props.areasAndRoutes[area].classicRoutes)
       }
       return acc;
     }, [])
-    console.log(matchedType)
   }
 
   return (

@@ -45,7 +45,9 @@ export default class App extends Component {
             <Header search={this.handleSearch}/>
             <Filter climb={this.state.areas}
                     updateFromFilter={this.updateFromFilter}/>
-            <ListContainer areaName={this.state.filterAreas} areasAndRoutes={this.state.areas} areaType={this.state.filterTypes}/>
+            <ListContainer filterAreas={this.state.filterAreas} 
+                            areasAndRoutes={this.state.areas} 
+                            filterTypes={this.state.filterTypes}/>
         </div>
       );
     }

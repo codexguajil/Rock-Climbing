@@ -23,6 +23,7 @@ export default class Search extends Component {
       <form>
       <input id="search-input"
              type="text"
+             placeholder="search by county"
              value={this.state.name}
              onChange={this.updatingSearch}
       />

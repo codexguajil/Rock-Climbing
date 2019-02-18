@@ -14,7 +14,6 @@ export default function ListContainer (props) {
     return acc;
   }, [])
 
-  
 
   let matchedType = props.areaType.reduce((acc, selectedType) => {
     matchedAreas.forEach((uniqueArea) => {
@@ -27,8 +26,6 @@ export default function ListContainer (props) {
 
     return acc;
   }, []);
-
-
 
   return (
       <ul>

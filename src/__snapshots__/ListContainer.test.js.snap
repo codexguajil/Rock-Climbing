@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListContainer should produce a collection of climbing routes if user selects type & area 1`] = `
-<ul>
+<ul
+  className="climbing-route-list-container"
+>
   <Description
     matchedType={
       Object {
@@ -18,4 +20,8 @@ exports[`ListContainer should produce a collection of climbing routes if user se
 </ul>
 `;
 
-exports[`ListContainer should produce a list of climbing routes that are within the area that the user types in the search 1`] = `<ul />`;
+exports[`ListContainer should produce a list of climbing routes that are within the area that the user types in the search 1`] = `
+<ul
+  className="climbing-route-list-container"
+/>
+`;

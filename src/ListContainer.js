@@ -34,7 +34,7 @@ export default function ListContainer (props) {
   }
 
   return (
-      <ul>
+      <ul className="climbing-route-list-container">
         {
           
       matchedType.map((type) => {

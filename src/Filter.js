@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Hiker from "./assets/hiker.png"
 
 export default class Filter extends Component {
   constructor() {
@@ -75,6 +76,7 @@ export default class Filter extends Component {
         <h3>Distance From Denver</h3>
         <div className="filter-range-section">
           <p>{this.state.setMax} miles away</p>
+          <img className="hiker-image" src={Hiker} alt="hiker"/> 
           <input className="range" type="range" onChange={this.changeType} min="1" max="400" ></input>
         </div>
         <h3>Type</h3>
@@ -82,9 +84,10 @@ export default class Filter extends Component {
           {
             this.state.types.map((type) => {
               return (
-                <div>
-                  <input onChange={this.changeArea} name="types" type="checkbox" value={type}/> {type}
-                </div>
+                <label class="container">
+                  <input onChange={this.changeArea} name="types" type="checkbox" value={type}/>  
+                  <span class="checkmark">{type}</span>
+                </label>
               )
             })
           }
@@ -94,9 +97,10 @@ export default class Filter extends Component {
           {
             this.state.areas.map((area) => {
               return (
-                <div>
-                  <input onChange={this.UpdateAreasPick} name="areas" type="checkbox" value={area}/> {area}
-                </div>
+                <label class="container">
+                  <input onChange={this.UpdateAreasPick} name="areas" type="checkbox" value={area}/> 
+                  <span class="checkmark">{area}</span>
+                </label>
               )
             })
           }

@@ -33,7 +33,6 @@ export default function ListContainer (props) {
     }, [])
   }
 
-
   return (
       <ul className="climbing-route-list-container">
         {

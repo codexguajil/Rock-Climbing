@@ -51,7 +51,6 @@ const mockColoradoClimbingAreas = {
         }
     }
 
-
 const mockFilterTypesSearch = [];
 const mockFilterAreasSearch = ["Boulder Canyon"];
 

@@ -5,7 +5,8 @@
     background-color: rgba( 0, 0, 0, .5);
     border-radius: 25px;
     width: 80%;
-    height: 500px;
+    min-height: 400px;
+    max-height: 650px;
     margin: 20px auto;
     h2{
         text-align: center;
@@ -16,6 +17,7 @@
 }
 
 .filter-range-section {
+    position: relative;
     width: 80%;
     margin: 10px auto;
     input[type="range"] {
@@ -28,6 +30,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .filter-area-section {
@@ -38,9 +41,88 @@
 }
 
 .filter-submit-button {
-    position: absolute;
+    font-family: "Arvo", sans-serif;
+    font-size: 2em;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    color: white;
+    position: relative;
+    background: none;
     bottom: 20px;
     left: 50%;
-    transform: translate(-50%, 0)
+    transform: translate(-50%, 0);
+    outline: none;
+    &:hover {
+        background-color: #ccc;
+    }
 }
 
+.hiker-image {
+    width: 30px;
+    position: absolute;
+    left: -30px;
+    top: 10px;
+}
+
+.container {
+    margin: 10px;
+    display: block;
+    position: relative;
+    font-size: 20px;
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        border-radius: 5px;
+        border: 2px solid #ffffff;
+        height: 25px;
+        width: 100px;
+        padding: 5px;
+      }
+      &:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      input:checked ~ .checkmark {
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        color: #000000;
+      }
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+    &:focus {
+        outline: none;
+      }
+    &::-webkit-slider-runnable-track {
+        height: 8.4px;
+        cursor: pointer;
+        background: repeating-linear-gradient(
+            90deg,
+            rgb(0, 0, 0),
+            rgb(0, 0, 0)10px,
+            rgb(255, 255, 255)10px,
+            rgb(255, 255, 255) 20px
+          );
+      }
+      &::-webkit-slider-thumb {
+        height: 100px;
+        width: 50px;
+        background-image: url("./assets/mountain.png");
+        background-size: 50px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -30px;
+      }
+  }

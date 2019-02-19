@@ -3,8 +3,7 @@ import canyon from './assets/boulderCanyon.jpg';
 import Header from './Header';
 import Filter from './Filter';
 import ListContainer from './ListContainer';
-// import { coloradoClimbingAreas, distanceFromDenverGroupings } from './data';
-import './Master.scss';
+// import './Master.scss';
 
 export default class App extends Component {
   constructor() {
@@ -37,12 +36,9 @@ export default class App extends Component {
     this.setState({filterAreas: value, filterTypes: []})
   }
 
-  //methods go here
-  //learn fetch/catch
-
   render() {
       return (
-        <div className="App" onScroll={this.fixer}>
+        <div className="App">
             <Header className="header" search={this.handleSearch}/>
             <Filter climb={this.state.areas}
                     updateFromFilter={this.updateFromFilter}/>

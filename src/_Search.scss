@@ -1,4 +1,4 @@
-$base-color: #383838;
+// $base-color: #383838;
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
   position: $position;

@@ -52,21 +52,28 @@ const mockColoradoClimbingAreas = {
     }
 
 
+const mockFilterTypesSearch = [];
+const mockFilterAreasSearch = ["Boulder Canyon"];
+
 describe('ListContainer', () => {
 
+    
+    it('should produce a collection of climbing routes if user selects type & area', () => {
     const wrapper = shallow(
         <ListContainer filterAreas={mockFilterAreas}
-                        areasAndRoutes={mockColoradoClimbingAreas}
-                        filterTypes={mockFilterTypes}/>
+                       areasAndRoutes={mockColoradoClimbingAreas}
+                       filterTypes={mockFilterTypes}/>
     );
-
-
-    it('should produce a collection of climbing routes if user selects type & area', () => {
         expect(wrapper).toMatchSnapshot(); 
     });
 
-   // it('should produce a list of climbing routes that are within the area that the user types in the search', () => {
-   //     expect()
-    //})
+   it('should produce a list of climbing routes that are within the area that the user types in the search', () => {
+    const wrapper = shallow(
+        <ListContainer filterAreas={mockFilterAreasSearch}
+                       areasAndRoutes={mockColoradoClimbingAreas}
+                       filterTypes={mockFilterTypesSearch}/>
+    );
+        expect(wrapper).toMatchSnapshot(); 
+    })
 
 });

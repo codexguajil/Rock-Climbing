@@ -20,7 +20,7 @@ export default class Search extends Component {
 
   render() {
     return (
-      <form>
+      <form className="search-bar">
       <input id="search-input"
              type="text"
              placeholder="search by county"

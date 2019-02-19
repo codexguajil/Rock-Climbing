@@ -13,8 +13,7 @@ export default class App extends Component {
       areas: {},
       distances: [],
       filterAreas: [],
-      filterTypes: [],
-      searchString: ''
+      filterTypes: []
     }
   }
 
@@ -33,7 +32,21 @@ export default class App extends Component {
   }
 
   handleSearch = (value) => {
-    this.setState({searchString: value})
+    console.log(value)
+    this.setState({filterAreas: value, filterTypes: []})
+  }
+
+  fixer = (event) => {
+    let header = document.getElementsByClassName('header');
+      console.log('you scroller')
+    if (window.scrollTop() >= 100) {
+        header.classList.add('fixed-header');
+        // document.querySelector('nav div').addClass('visible-title');
+    }
+    else {
+        header.classList.remove('fixed-header');
+        // document.querySelector('nav div').removeClass('visible-title');
+    }
   }
 
   //methods go here
@@ -41,13 +54,13 @@ export default class App extends Component {
 
   render() {
       return (
-        <div className="App">
+        <div className="App" onScroll={this.fixer}>
             <Header search={this.handleSearch}/>
             <Filter climb={this.state.areas}
                     updateFromFilter={this.updateFromFilter}/>
-            { this.state.filterAreas.length && 
-            <ListContainer areaName={this.state.filterAreas} areasAndRoutes={this.state.areas} areaType={this.state.filterTypes}/>
-            }
+            <ListContainer filterAreas={this.state.filterAreas} 
+                            areasAndRoutes={this.state.areas} 
+                            filterTypes={this.state.filterTypes}/>
         </div>
       );
     }

@@ -1,0 +1,32 @@
+$base-color: #383838;
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin circle-btn($bkgd-color, $font-size){
+  height: 96px;
+  border-radius: 50%;
+}
+
+.search-bar {
+  @include position(absolute, $top: 20px, $right: 5px);
+  background-color: none;
+  text-align: right;
+  width: 35%;
+}
+
+#search-input {
+  height: 20px;
+  width: 200px;
+}
+
+.search-submit {
+  @include circle-btn(#FFFFFF, 1em); 
+  font: bold 22px/1 Helvetica, Verdana, sans-serif;
+  margin-left: 15px;
+}

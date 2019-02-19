@@ -6,7 +6,18 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// let header = document.getElementsByClassName('header');
+
+// window.scroll(function(){
+//       console.log('you scroller')
+//     if (window.scrollTop() >= 100) {
+//         header.classList.add('fixed-header');
+//         // document.querySelector('nav div').addClass('visible-title');
+//     }
+//     else {
+//         header.classList.remove('fixed-header');
+//         // document.querySelector('nav div').removeClass('visible-title');
+//     }
+// });
+
+

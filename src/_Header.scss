@@ -1,0 +1,28 @@
+$base-color: #383838;
+$font-color: #F8F8FF;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgba( $base-color, .7 );
+  font-size: 32px;
+  height: 150px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-transform: uppercase;
+  font: bold 36px/1 Helvetica, Verdana, sans-serif;
+  h1 {
+    background-color: rgba(18,72,120, 0.8);
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+}
+
+

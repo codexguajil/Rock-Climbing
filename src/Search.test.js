@@ -39,5 +39,5 @@ describe('Search', () => {
     
     expect(wrapper.state('value')).toEqual('my search input');
     
-  })
+  });
 });

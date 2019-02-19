@@ -18,11 +18,12 @@ export default class App extends Component {
   }
 
   componentDidMount() {  
-  fetch('http://whateverly-datasets.herokuapp.com/api/v1/coloradoClimbingAreas')
-      .then(response => response.json())
-      .then(climbingData => this.setState({areas: climbingData.coloradoClimbingAreas}))
-      .catch(error => {throw new Error(error)})
-    }
+    fetch('http://whateverly-datasets.herokuapp.com/api/v1/coloradoClimbingAreas')
+        .then(response => response.json())
+        .then(climbingData => this.setState({areas: climbingData.coloradoClimbingAreas}))
+        .catch(error => {throw new Error(error)})
+
+  }
 
   updateFromFilter = (areas, types) => {
     this.setState({
@@ -36,26 +37,13 @@ export default class App extends Component {
     this.setState({filterAreas: value, filterTypes: []})
   }
 
-  fixer = (event) => {
-    let header = document.getElementsByClassName('header');
-      console.log('you scroller')
-    if (window.scrollTop() >= 100) {
-        header.classList.add('fixed-header');
-        // document.querySelector('nav div').addClass('visible-title');
-    }
-    else {
-        header.classList.remove('fixed-header');
-        // document.querySelector('nav div').removeClass('visible-title');
-    }
-  }
-
   //methods go here
   //learn fetch/catch
 
   render() {
       return (
         <div className="App" onScroll={this.fixer}>
-            <Header search={this.handleSearch}/>
+            <Header className="header" search={this.handleSearch}/>
             <Filter climb={this.state.areas}
                     updateFromFilter={this.updateFromFilter}/>
             <ListContainer filterAreas={this.state.filterAreas} 

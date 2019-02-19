@@ -2,39 +2,52 @@
 
 exports[`Description should have a expanded sanpshot when funciton is invoke 1`] = `
 <li
+  class="description-box"
   onClick={[Function]}
 >
-  <p>
-     
+  <h3>
+    Area: 
     Undertow
      
-  </p>
-  <div>
+  </h3>
+  <div
+    class="info-box"
+  >
     <p>
+       
+      Undertow
+    </p>
+    <p>
+      Route Grade: 
       5.10a
     </p>
     <p>
-       
+      Route Type: 
       trad
       aid
       alpine
     </p>
-    <p>
+    <a
+      class="link"
+      href="{this.props.matchedType.link}"
+    >
+      More information on 
+      Undertow
        
-      https://www.mountainproject.com/route/106200712/undertow
-    </p>
+    </a>
   </div>
 </li>
 `;
 
 exports[`Description should have a non expanded snapshot 1`] = `
 <li
+  class="description-box"
   onClick={[Function]}
 >
-  <p>
-     
+  <h3>
+    Area: 
     Undertow
      
-  </p>
+  </h3>
 </li>
 `;

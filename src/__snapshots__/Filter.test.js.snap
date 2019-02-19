@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter render with snapshot 1`] = `
+<form
+  className="filter-section"
+  onSubmit={[Function]}
+>
+  <h2>
+    Pick Your Next Plan
+  </h2>
+  <h3>
+    Distance From Denver
+  </h3>
+  <div
+    className="filter-range-section"
+  >
+    <p>
+      50
+       miles away
+    </p>
+    <img
+      alt="hiker"
+      className="hiker-image"
+      src="hiker.png"
+    />
+    <input
+      className="range"
+      max="400"
+      min="1"
+      onChange={[Function]}
+      type="range"
+    />
+  </div>
+  <h3>
+    Type
+  </h3>
+  <div
+    className="filter-type-section"
+  />
+  <h3>
+    Areas
+  </h3>
+  <div
+    className="filter-area-section"
+  />
+  <input
+    class="filter-submit-button"
+    type="submit"
+    value="Climb"
+  />
+</form>
+`;

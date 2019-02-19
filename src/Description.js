@@ -17,14 +17,15 @@ export default class Description extends Component {
   render() {
 
     return (
-      <li onClick={this.toggleDescription}>
-        <p> {this.props.matchedType.name} </p>
+      <li class="description-box"onClick={this.toggleDescription}>
+        <h3>Area: {this.props.matchedType.name} </h3>
         
         { this.state.showDescription && 
-        <div>  
-        <p>{this.props.matchedType.grade}</p>
-        <p> {this.props.matchedType.type}</p>
-        <p> {this.props.matchedType.link}</p>
+        <div class="info-box">  
+          <p> {this.props.matchedType.name}</p>
+          <p>Route Grade: {this.props.matchedType.grade}</p>
+          <p>Route Type: {this.props.matchedType.type}</p>
+          <a class="link" href="{this.props.matchedType.link}">More information on {this.props.matchedType.name} </a>
         </div> 
       }
       </li>

@@ -2,15 +2,6 @@ import React from 'react';
 import Filter from './Filter';
 import { shallow } from 'enzyme';
 
-describe('Filter', () => {
-
-  let wrapper;
-
-
-  const mockFilterAreas = ["Canon City", "Boulder Canyon"];
-
-  const mockFilterTypes = ["toprope"];
-
   const mockColoradoClimbingAreas = {
     "Canon City": {
         "milesFromDenver": 119,
@@ -56,42 +47,54 @@ describe('Filter', () => {
         }
     }
 
-  const mockFilterTypesSearch = [];
-  const mockFilterAreasSearch = ["Boulder Canyon"];
+
+  const mockFunction = jest.fn();
+
+
+
+
+
+
+describe('Filter', () => {
+
+  let wrapper;
 
 
   beforeEach(() => {
     wrapper = shallow(
-      <Filter/> 
+      <Filter climb={mockColoradoClimbingAreas}
+                    updateFromFilter={mockFunction}/>
       )
   })
 
   it('should test the states', () => {
     expect(wrapper.state()).toEqual({setMax: 50, types: [], areas: [], areasPick: [], typesPick: []
-    }
+    })
   })
 
   it('should change type', () => {
-    // setting defualt state 
-    //  invoke changeType
-    // Test setMax and types 
-    // 
+    expect(wrapper.state('setMax')).toEqual(50);
+    expect(wrapper.state('types')).toEqual([]);
+    wrapper.find('.range').simulate('change', {target: {value: 120}});
+    expect(wrapper.state('setMax')).toEqual(120);
+    expect(wrapper.state('types')).toEqual(["trad", "sport", "toprope", "boulder", "aid"]);
   })
 
   it('should change Area', () => {
-    // areas: areas,
-      // typesPick: types
+    expect(wrapper.state('typesPick')).toEqual([]);
+    expect(wrapper.state('areas')).toEqual([]);
+    wrapper.find('.range').simulate('change', {target: {value: 120}});
+    wrapper.find('.types-checkbox').at(0).simulate('change', {target: {checked: true}})
+    expect(wrapper.state('typesPick')).toEqual(["trad", "sport", "toprope", "boulder", "aid"]);
+    expect(wrapper.state('areas')).toEqual(['Canon City','Boulder Canyon']);
   })
 
-  it('should Update Area', () => {
-    // areasPick
-  })
+  // it('should Update Area', () => {
+  //   // areasPick
+  // })
 
-  it('should submit filter', () => {
-    // simulate click
-  })
 
   it('render with snapshot', () => {
-
+    expect(wrapper).toMatchSnapshot();
   })
-}
+})

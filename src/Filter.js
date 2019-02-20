@@ -31,7 +31,7 @@ export default class Filter extends Component {
     this.changeArea()
   }
 
-  changeArea = event => {
+  changeArea = () => { 
     let types = []
     document.querySelectorAll('input[name="types"]:checked').forEach((type) => {
       types.push(type.value)
@@ -64,7 +64,6 @@ export default class Filter extends Component {
 
   submitFilter = event => {
     event.preventDefault()
-    console.log('submit button')
     this.props.updateFromFilter(this.state.areasPick, this.state.typesPick)
   }
 
@@ -85,7 +84,7 @@ export default class Filter extends Component {
             this.state.types.map((type) => {
               return (
                 <label class="container">
-                  <input onChange={this.changeArea} name="types" type="checkbox" value={type}/>  
+                  <input className="types-checkbox" onChange={this.changeArea} name="types" type="checkbox" value={type}/>  
                   <span class="checkmark">{type}</span>
                 </label>
               )

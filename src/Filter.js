@@ -8,6 +8,7 @@ export default class Filter extends Component {
       setMax: 50,
       types: [],
       areas: [],
+      button: true,
       areasPick: [],
       typesPick: []
     }
@@ -57,9 +58,16 @@ export default class Filter extends Component {
     document.querySelectorAll('input[name="areas"]:checked').forEach((type) => {
       areas.push(type.value)
     })
-    this.setState({
-      areasPick: areas
-    })
+    if(areas.length > 0 ){
+      this.setState({
+        areasPick: areas,
+        button: false
+      })
+    }else{
+      this.setState({
+        button: true
+      })
+    }
   }
 
   submitFilter = event => {
@@ -71,7 +79,7 @@ export default class Filter extends Component {
   render() {
     return (
       <form onSubmit={this.submitFilter} className="filter-section"> 
-        <h2>Pick Your Next Plan</h2>
+        <h2>Find Your Next Adventure</h2>
         <h3>Distance From Denver</h3>
         <div className="filter-range-section">
           <p>{this.state.setMax} miles away</p>
@@ -104,7 +112,7 @@ export default class Filter extends Component {
             })
           }
         </div>
-        <input class="filter-submit-button" type="submit" value="Climb"></input>
+        <input class="filter-submit-button" type="submit" value="Get Climbs" disabled={this.state.button}></input>
       </form>
     )
   }

@@ -10,9 +10,11 @@
     margin: 20px auto;
     h2{
         text-align: center;
+        font-size: 3em;
     }
     h3 {
         text-align: center; 
+        margin: 10px;
     }
 }
 
@@ -22,7 +24,7 @@
     margin: 10px auto;
     input[type="range"] {
         width: 100%;
-        margin: 10px auto;
+        margin: 25px auto;
     }
 }
 
@@ -48,13 +50,20 @@
     border: 2px solid #ffffff;
     color: white;
     position: relative;
-    background: none;
     bottom: 20px;
     left: 50%;
+    background: none;
     transform: translate(-50%, 0);
     outline: none;
+    padding: 5px;
     &:hover {
         background-color: #ccc;
+    }
+    &:disabled {
+        background-color: none;
+    }
+    &:enabled {
+        background: #881616de;
     }
 }
 

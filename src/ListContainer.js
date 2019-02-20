@@ -23,14 +23,16 @@ export default function ListContainer (props) {
       return acc;
     }, []);
   
-  } else {
+  } else if( typeof props.filterAreas === "string")  {
     //if the user types an area in the search directly then execute the following:
     matchedType = Object.keys(props.areasAndRoutes).reduce((acc, area) => {
-      if (props.filterAreas === area) {
+      if (props.filterAreas.toLowerCase() === area.toLowerCase()) {
        acc = props.areasAndRoutes[area].classicRoutes
       }
       return acc;
     }, [])
+  } else {
+    matchedType = []
   }
 
   return (

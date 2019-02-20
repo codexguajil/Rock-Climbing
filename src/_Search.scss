@@ -24,12 +24,13 @@
   font: bold 18px/1 Helvetica, Verdana, sans-serif;
   height: 24px;
   padding-left: 8px;
-  text-transform: uppercase;
   width: 240px;
 }
 
 .search-submit {
   @include circle-btn(#FFFFFF, 1em); 
   font: bold 22px/1 Helvetica, Verdana, sans-serif;
-  margin-left: 30px;
+  margin: 0px 40px;
+  padding: 10px;
+  height: 110px;
 }

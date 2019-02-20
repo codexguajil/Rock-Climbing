@@ -1,3 +1,8 @@
+ul {
+  font-family: "Arvo", sans-serif;
+  padding: 20px 0px;
+}
+
 li {
   list-style: none
 }
@@ -10,6 +15,10 @@ li {
   margin-top: 10px;
   margin: auto;
   width: 75%;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px white solid;
+  font-size: 1.25em;
 }
 
 .info-box {
@@ -20,8 +29,4 @@ li {
 
 .info {
   margin-left: 20px;
-}
-
-.link {
-  color: #fff;
 }

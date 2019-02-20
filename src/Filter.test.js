@@ -75,16 +75,26 @@ describe('Filter', () => {
   it('should change type', () => {
     expect(wrapper.state('setMax')).toEqual(50);
     expect(wrapper.state('types')).toEqual([]);
+<<<<<<< HEAD
     wrapper.find('.range').simulate('change', {target: {value: 120}});
     expect(wrapper.state('setMax')).toEqual(120);
     expect(wrapper.state('types')).toEqual(["trad", "sport", "toprope", "boulder", "aid"]);
   })
 
   it('should change Area', () => {
+=======
+    wrapper.find('.range').simulate('change', {target: {value: 115}});
+    expect(wrapper.state('setMax')).toEqual(115);
+    expect(wrapper.state('types')).toEqual(["trad", "sport", "toprope", "boulder", "aid"]);
+  })
+
+  it.only('should setState for typesPick and areas', () => {
+>>>>>>> a69c4e9c0136df52858610322de5562a9eb266df
     expect(wrapper.state('typesPick')).toEqual([]);
     expect(wrapper.state('areas')).toEqual([]);
     wrapper.find('.range').simulate('change', {target: {value: 120}});
     wrapper.find('.types-checkbox').at(0).simulate('change', {target: {checked: true}})
+<<<<<<< HEAD
     expect(wrapper.state('typesPick')).toEqual(["trad", "sport", "toprope", "boulder", "aid"]);
     expect(wrapper.state('areas')).toEqual(['Canon City','Boulder Canyon']);
   })
@@ -92,6 +102,19 @@ describe('Filter', () => {
   // it('should Update Area', () => {
   //   // areasPick
   // })
+=======
+    wrapper.instance().changeArea();
+    // expect(wrapper.state('typesPick')).toEqual(["trad", "sport", "toprope", "boulder", "aid"]);
+    expect(wrapper.state('areas')).toEqual(['Canon City','Boulder Canyon']);
+  })
+
+  it('should Update Area', () => {
+    // areasPick
+    expect.state('areasPick').toEqual([]);
+    wrapper.find('.range').simulate('change', {target: {value: 120}});
+    expect.state('areasPick').toEqual(['Canon City', 'Boulder Canyon'])
+  })
+>>>>>>> a69c4e9c0136df52858610322de5562a9eb266df
 
 
   it('render with snapshot', () => {

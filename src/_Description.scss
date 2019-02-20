@@ -1,0 +1,27 @@
+li {
+  list-style: none
+}
+
+.description-box {
+  border-radius: 25px;
+  border-color: red;
+  background-color: rgba( 0, 0, 0, .5);
+  color: #fff;
+  margin-top: 10px;
+  margin: auto;
+  width: 75%;
+}
+
+.info-box {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.link {
+  color: #fff;
+}

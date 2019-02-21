@@ -3,6 +3,12 @@
 ## See it Live! 
 Climb Time on Github Pages
 
+## Contributors: 
+- Edgar Eloy Munoz
+- Kim Meyers
+- Gabe Inzurriaga
+- Tim Miller 
+
 ## Set-Up Front-End:
 - Clone this repo
 - Run npm install from the root directory
@@ -11,7 +17,7 @@ Climb Time on Github Pages
 ## Background and Information:
 There are a few websites that are dedicated to the climbing community with varying amounts of detailed information. Typically as you try to set up your weekend excursion you are talking with a friend going through a local guidebook, with outdated trailhead information and postit notes marking the pages that you want to remember. We thought there needs to be an easier option for people to find and track the climbs here in Colorado. 
 
-With Climb Time you can search by distance from Denver to find the style of climb you are looking to try this weekend. Once you have decided to head out for a quick Top Rope session this weekend you can set the distance willing to travel to find the areas with that style of climb. From there you will be able to see the Route name, difficulty and a link to some more beta if needed. 
+With Climb Time you can search for classic climbing routes by distance from Denver to find the style of climb you are looking to try this weekend. Once you have decided to head out for a quick top-rope session this weekend you can set the distance willing to travel to find the areas with that style of climb. From there you will be able to see the route name, difficulty and a link to some more beta if needed. 
 
 ## Additional Enhancements: 
 - login/Create User
@@ -29,11 +35,6 @@ With Climb Time you can search by distance from Denver to find the style of clim
 Jest and Enzyme for front-end testing.
 Run npm test from the root directory
 
-## Contributors: 
-- Edgar Eloy Munoz
-- Kim Meyers
-- Gabe Inzurriaga
-- Tim Miller 
 
 ## Preview: 
 

@@ -105,7 +105,7 @@ export default class Filter extends Component {
             this.state.areas.map((area) => {
               return (
                 <label class="container">
-                  <input onChange={this.UpdateAreasPick} name="areas" type="checkbox" value={area}/> 
+                  <input className="areas-checkbox" onChange={this.UpdateAreasPick} name="areas" type="checkbox" value={area}/> 
                   <span class="checkmark">{area}</span>
                 </label>
               )

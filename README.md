@@ -5,7 +5,7 @@ Climb Time on Github Pages
 
 ## Contributors: 
 - Edgar Eloy Munoz
-- Kim Meyers
+- Kim Myers
 - Gabe Inzurriaga
 - Tim Miller 
 

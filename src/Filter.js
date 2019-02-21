@@ -32,7 +32,7 @@ export default class Filter extends Component {
     this.changeArea()
   }
 
-  changeArea = () => { 
+  changeArea = (e) => { 
     let types = []
     document.querySelectorAll('input[name="types"]:checked').forEach((type) => {
       types.push(type.value)

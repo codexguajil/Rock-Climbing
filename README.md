@@ -39,4 +39,6 @@ Run npm test from the root directory
 
 
 ## Preview: 
+![Alt Text](https://files.slack.com/files-pri/T029P2S9M-FGCC1GSEL/2019-02-21_07.41.47.gif)
 
+![Alt Text](https://files.slack.com/files-pri/T029P2S9M-FGDE7AFHB/2019-02-21_07.43.39.gif)

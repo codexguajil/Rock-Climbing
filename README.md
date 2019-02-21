@@ -4,10 +4,12 @@
 Climb Time on Github Pages
 
 ## Contributors: 
-- Edgar Eloy Munoz
-- Kim Myers
-- Gabe Inzurriaga
-- Tim Miller 
+
+
+- [Edgar Eloy Munoz](https://github.com/criteriamor)
+- [Kim Myers](https://github.com/kimmichurri)
+- [Gabe Inzurriaga](https://github.com/Inzurriaga)
+- [Gabe Inzurriaga](https://github.com/timmiller601)
 
 ## Set-Up Front-End:
 - Clone this repo
@@ -23,7 +25,7 @@ With Climb Time you can search for classic climbing routes by distance from Denv
 - login/Create User
 - Favorite Button: to store your favorite climbs 
 - share to social media 
-- search by difficulty 
+- search by difficulty or route name
 
 ## Primary Technologies Used:
 - React

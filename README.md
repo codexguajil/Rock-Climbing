@@ -41,4 +41,4 @@ Run npm test from the root directory
 ## Preview: 
 ![Alt Text](2019-02-21_07.41.47.gif)
 
-![Alt Text](2019-02-21_07.43.39.gif)
+![giftwo](https://user-images.githubusercontent.com/42972945/53182455-c364e480-35b6-11e9-8cfa-c8b74e839dcd.gif)

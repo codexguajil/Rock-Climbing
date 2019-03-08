@@ -1,31 +1,27 @@
 # Climb Time 
 
-## See it Live! 
-Climb Time on Github Pages
 
 ## Contributors: 
-
-
 - [Edgar Eloy Munoz](https://github.com/criteriamor)
 - [Kim Myers](https://github.com/kimmichurri)
 - [Gabe Inzurriaga](https://github.com/Inzurriaga)
-- [Gabe Inzurriaga](https://github.com/timmiller601)
+- [Tim Miller](https://github.com/timmiller601)
 
-## Set-Up Front-End:
+## Install/Set-Up:
 - Clone this repo
 - Run npm install from the root directory
 - Run npm start and visit localhost:3000 in your browser
 
 ## Background and Information:
-There are a few websites that are dedicated to the climbing community with varying amounts of detailed information. Typically as you try to set up your weekend excursion you are talking with a friend going through a local guidebook, with outdated trailhead information and postit notes marking the pages that you want to remember. We wanted there to be an easier way for people to find and track climbs here in Colorado so we developed this app that helps simplify that process.
+There are a few websites that are dedicated to the climbing community with varying amounts of detail and information. Oftentimes as you try to set up your weekend excursion you are talking with a friend going through a local guidebook with post-it notes marking the pages and climbing routes that you want to remember- this can be time-consuming and makes it difficult to find climbs of the level and type you enjoy. We wanted there to be an easier way for people to find and track climbs here in Colorado based on some simple search criteria so we developed this app to make the process easier and shorter.
 
-With Climb Time you can search for classic climbing routes by distance from Denver to find the style of climb you are looking to try this weekend. Once you have decided to head out for a quick top-rope session this weekend you can set the distance willing to travel to find the areas with that style of climb. From there you will be able to see the route name, difficulty and a link to some more beta if needed. 
+With Climb Time you can search for classic climbing routes by distance from Denver to find the style of climb you are looking to do this weekend. You could select 'top-rope' from the 'types of climbing' section then set the distance willing to travel from Denver with the slider to find the areas with that style of climb. From there you will be able to see the route name, difficulty and a link to some more beta if needed. 
 
-## Additional Enhancements: 
-- login/Create User
+## Future Enhancements: 
+- Create User/Login
 - Favorite Button: to store your favorite climbs 
-- share to social media 
-- search by difficulty or route name
+- Share climbs on social media 
+- Search by difficulty or route name
 
 ## Primary Technologies Used:
 - React
@@ -39,6 +35,6 @@ Run npm test from the root directory
 
 
 ## Preview: 
-![Alt Text](2019-02-21_07.41.47.gif)
+![climb-time-gif-1](https://user-images.githubusercontent.com/43019784/54033820-8f6eef00-4172-11e9-8e5a-a9fd288a8385.gif)
 
 ![giftwo](https://user-images.githubusercontent.com/42972945/53182455-c364e480-35b6-11e9-8cfa-c8b74e839dcd.gif)

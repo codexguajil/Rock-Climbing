@@ -24,8 +24,7 @@ With Climb Time you can search for classic climbing routes by distance from Denv
 - Search by difficulty or route name
 
 ## Primary Technologies Used:
-- React
-- JavaScript 
+- ReactJS 
 - HTML
 - CSS/SCSS 
 

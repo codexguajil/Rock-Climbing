@@ -1,5 +1,9 @@
 # Climb Time 
 
+## Preview: 
+![climb-time-gif-1](https://user-images.githubusercontent.com/43019784/54033820-8f6eef00-4172-11e9-8e5a-a9fd288a8385.gif)
+
+![giftwo](https://user-images.githubusercontent.com/42972945/53182455-c364e480-35b6-11e9-8cfa-c8b74e839dcd.gif)
 
 ## Contributors: 
 - [Edgar Eloy Munoz](https://github.com/criteriamor)
@@ -31,9 +35,3 @@ With Climb Time you can search for classic climbing routes by distance from Denv
 ## Testing:
 Jest and Enzyme for front-end testing.
 Run npm test from the root directory
-
-
-## Preview: 
-![climb-time-gif-1](https://user-images.githubusercontent.com/43019784/54033820-8f6eef00-4172-11e9-8e5a-a9fd288a8385.gif)
-
-![giftwo](https://user-images.githubusercontent.com/42972945/53182455-c364e480-35b6-11e9-8cfa-c8b74e839dcd.gif)
